@@ -7,7 +7,7 @@ import headerImg from "../assets/images/headerImg.svg"
 const Banner = () => {
   const [loopNum, setLoopNum]=useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  
+  const toRotate = ["Web Developer", "Web Designer","UI/UX Designer"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300-Math.random()*100);
 
