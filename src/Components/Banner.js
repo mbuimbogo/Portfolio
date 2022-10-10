@@ -5,7 +5,11 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import headerImg from "../assets/images/headerImg.svg"
 
 const Banner = () => {
-
+  const [loopNum, setLoopNum]=useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(300-Math.random()*100);
 
   return (
     <section className='banner' id="home">
