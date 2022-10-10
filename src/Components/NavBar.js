@@ -3,11 +3,10 @@ import {useState, useEffect} from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import navIcon1 from "../asset/images/github.png"
-import navIcon2 from "../asset/images/linked-in.webp"
-import navIcon3 from "../asset/images/twitter.png"
-import logo from "../asset/images/github.png"
-
+import navIcon1 from "../assets/images/nav-icon1.svg";
+import navIcon2 from "../assets/images/nav-icon2.svg";
+import navIcon3 from "../assets/images/nav-icon3.svg";
+import logo from "../assets/images/logo.svg";
 
 const NavBar = () => {
     const [activeLink, setActiveLink] = useState("home")
