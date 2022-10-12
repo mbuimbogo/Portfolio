@@ -5,8 +5,8 @@ import {Col, Container, Row} from 'react-bootstrap'
 import ProjectCard from './ProjectCard'
 import colorSharp2 from "../assets/images/color-sharp2.png"
 import projImg1 from "../assets/images/project-img1.png"
-import projImg2 from "../assets/images/project-img1.png"
-import projImg3 from "../assets/images/project-img1.png"
+import projImg2 from "../assets/images/project-img2.png"
+import projImg3 from "../assets/images/project-img3.png"
 
 const Projects = () => {
     const projects = [
@@ -44,7 +44,7 @@ const Projects = () => {
                 <h2>Projects</h2>
                 <p>Lorem Ipsum</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                <Nav variant="pills" defaultActiveKey="/home">
+                <Nav variant="pills" className='nav-pills mb-5 justify-content-center align-items-center' id="pills-tab">
                 <Nav.Item>
                 <Nav.Link eventKey="first">Tab One</Nav.Link>
                 </Nav.Item>
@@ -52,9 +52,7 @@ const Projects = () => {
                 <Nav.Link eventKey="second">Tab Two</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                <Nav.Link eventKey="third">
-                    Tab Three
-                </Nav.Link>
+                <Nav.Link eventKey="third"> Tab Three </Nav.Link>
                 </Nav.Item>
                 </Nav>
                 <Tab.Content>
