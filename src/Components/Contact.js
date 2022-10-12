@@ -19,7 +19,7 @@ const Contact = () => {
 const onFormUpdate = (category, value) => {
     setFormDetails({...formDetails, [category]: value})
 }
-}
+
 
 const handleSubmit = async(e) => {
     e.preventDefault();
@@ -82,5 +82,6 @@ const handleSubmit = async(e) => {
    </section>
   )
 }
+
 
 export default Contact
