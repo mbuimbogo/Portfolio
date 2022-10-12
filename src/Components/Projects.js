@@ -3,7 +3,10 @@ import { Nav } from 'react-bootstrap'
 import { Tab } from 'react-bootstrap'
 import {Col, Container, Row} from 'react-bootstrap'
 import ProjectCard from './ProjectCard'
-import colorSharp2 from "../assets/images/colorSharp2.png"
+import colorSharp2 from "../assets/images/color-sharp2.png"
+import projImg1 from "../assets/images/project-img1.png"
+import projImg2 from "../assets/images/project-img1.png"
+import projImg3 from "../assets/images/project-img1.png"
 
 const Projects = () => {
     const projects = [
@@ -40,7 +43,7 @@ const Projects = () => {
                 <Col>
                 <h2>Projects</h2>
                 <p>Lorem Ipsum</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey={first}>
+                <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav variant="pills" defaultActiveKey="/home">
                 <Nav.Item>
                 <Nav.Link eventKey="first">Tab One</Nav.Link>
