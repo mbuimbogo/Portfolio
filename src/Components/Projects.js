@@ -7,6 +7,9 @@ import colorSharp2 from "../assets/images/color-sharp2.png"
 import projImg1 from "../assets/images/project-img1.png"
 import projImg2 from "../assets/images/project-img2.png"
 import projImg3 from "../assets/images/project-img3.png"
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
+import { isVisible } from '@testing-library/user-event/dist/utils';
 
 const Projects = () => {
     const projects = [
@@ -41,8 +44,13 @@ const Projects = () => {
         <Container>
             <Row>
                 <Col>
+                <TrackVisibility>
+                  {({isVisible}) => 
+                  <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                 <h2>Projects</h2>
                 <p>Lorem Ipsum</p>
+                </div> }
+                </TrackVisibility>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav variant="pills" className='nav-pills mb-5 justify-content-center align-items-center' id="pills-tab">
                 <Nav.Item>
@@ -69,6 +77,7 @@ const Projects = () => {
                     <Tab.Pane eventKey="third">Loreen Ipsun</Tab.Pane>
                 </Tab.Content>
                 </Tab.Container>
+               
                 </Col>
             </Row>
         </Container>
