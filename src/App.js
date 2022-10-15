@@ -7,6 +7,7 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import "bootstrap/dist/css/bootstrap.min.css"
+// import {Route, Routes} from "react-router-dom"
 
 function App() {
   return (
@@ -15,6 +16,12 @@ function App() {
      <Banner/>
      <Skills/>
      <Projects/>
+     {/* <Routes>
+      <Route path='/' element={<Banner/>}/>
+      <Route exact path='/skills' element={<Skills/>}/>
+      <Route exact path='/projects' element={<Projects/>}/>
+
+     </Routes> */}
      <Contact/>
      <Footer/>
     </div>

@@ -3,6 +3,7 @@ import {useState, useEffect} from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from 'react-router-dom';
 import navIcon1 from "../assets/images/nav-icon1.svg";
 import navIcon2 from "../assets/images/nav-icon2.svg";
 import navIcon3 from "../assets/images/nav-icon3.svg";
@@ -42,7 +43,10 @@ const NavBar = () => {
                 <Nav.Link href="#home" className={ activeLink === "home" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdatedActiveLink("home")} >Home</Nav.Link>
                 <Nav.Link href="#skills" className={ activeLink === "skills" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdatedActiveLink("skills")} >Skills</Nav.Link>
                 <Nav.Link href="#projects" className={ activeLink === "projects" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdatedActiveLink("projects")} >Projects</Nav.Link>
-         
+                {/* <NavLink to="/" className="navbar-link" >Banner</NavLink>
+                <NavLink   to="./skills" className="navbar-link" >Skills</NavLink>
+                <NavLink to="./projects" className="navbar-link" >Projects</NavLink> */}
+                
               </Nav>
               <span className='navbar-text'>
                 <div className='social-icon'>
