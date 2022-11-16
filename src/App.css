@@ -116,7 +116,7 @@ span.navbar-text {
     line-height: 1;
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
-/*.social-icon a::before {
+.social-icon a::before {
     content: "";
     width: 42px;
     height: 42px;
@@ -136,7 +136,7 @@ span.navbar-text {
 }
 .social-icon a:hover img {
 	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-} */
+} 
 .navbar-text button {
   font-weight: 700;
   color: #fff;
