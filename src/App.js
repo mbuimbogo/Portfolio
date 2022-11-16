@@ -7,6 +7,7 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import "bootstrap/dist/css/bootstrap.min.css"
+
 // import {Route, Routes} from "react-router-dom"
 
 function App() {

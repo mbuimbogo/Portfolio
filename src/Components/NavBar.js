@@ -3,11 +3,14 @@ import {useState, useEffect} from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
+import twitterIm from "../assets/images/twitter.png"
 import navIcon1 from "../assets/images/nav-icon1.svg";
 import navIcon2 from "../assets/images/nav-icon2.svg";
-import navIcon3 from "../assets/images/nav-icon3.svg";
-import logo from "../assets/images/logo.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
+// import navIcon3 from "../assets/images/nav-icon3.svg";
+// import logo from "../assets/images/logo.svg";
 
 const NavBar = () => {
     const [activeLink, setActiveLink] = useState("home")
@@ -32,8 +35,9 @@ const NavBar = () => {
   return (
         <Navbar expand="lg" className ={scrolled ? "scrolled": ""} >
           <Container>
-            <Navbar.Brand href="#home">
-                <img src={logo} alt="logo"/>
+            <Navbar.Brand className="home" href="#home">
+                {/* <img src={logo} alt="logo"/> */}
+                <h1><strong>MBOGO</strong></h1>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className='navbar toggler icon'></span>
@@ -50,9 +54,19 @@ const NavBar = () => {
               </Nav>
               <span className='navbar-text'>
                 <div className='social-icon'>
-                    <a href="#" src={navIcon1} alt="" />
-                    <a href="#" src={navIcon2} alt="" />
-                    <a href="#" src={navIcon3} alt="" />
+                    <a target={"_blank"} rel="noreferrer" href="https://github.com/mbuimbogo" alt="github">
+                      <FontAwesomeIcon icon={faGithub} color="#fff"/>
+                      </a> 
+                      <a target={"_blank"} rel="noreferrer" href="https://www.linkedin.com/in/mbuipeter" alt="linkedin">
+                      <FontAwesomeIcon icon={faLinkedin} color="#fff"/>
+                      </a> 
+                      <a target={"_blank"} rel="noreferrer" href="https://twitter.com/mbogotech?t=ZyV92QJ8MI8TLPF2MJif2gs=09" alt="twitter">
+                      <FontAwesomeIcon icon={faTwitter} color="#fff"/>
+                      </a> 
+                    
+                    
+                    {/* <a href="https://www.linkedin.com/in/mbuipeter" src={navIcon2} alt="linkedin" width="16" height="16" viewBox="0 0 16 16"  />
+                    <a href="https://twitter.com/mbogotech?t=ZyV92QJ8MI8TLPF2MJif2gs=09" src={twitterIm} alt="twitter" width="16" height="16"  /> */}
                     {/* <a href="#" src={} alt="" /> */}
                 </div>
                 <button className='vvd' onClick={()=> console.log("contact")}><span>Let's connect</span></button>

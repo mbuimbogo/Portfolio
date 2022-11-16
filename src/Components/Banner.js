@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import React from 'react'
 import { Container, Row, Col} from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import headerImg from "../assets/images/header-img.svg";
+// import headerImg from "../assets/images/header-img.svg";
+import imgg from "../assets/images/imgg.jpg"
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 import { isVisible } from '@testing-library/user-event/dist/utils';
@@ -10,7 +11,7 @@ import { isVisible } from '@testing-library/user-event/dist/utils';
 const Banner = () => {
   const [loopNum, setLoopNum]=useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["Web Developer", "Web Designer","UI/UX Designer"];
+  const toRotate = ["Proffessional Coder", "Front-end Developer","UI/UX Designer"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random()*100);
   const period = 2000;
@@ -53,13 +54,13 @@ const Banner = () => {
                   <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                     <span className='tagline'>Welcome to my Portfolio</span>
                     <h1>{`Hi I'm Peter `}<span className='wrap'>{text}</span></h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>Front-end Developer with a demonstrated history of working in the internet industry. Building Web applications with React js and some other cool libraries and frameworks.</p>
                     <button onClick={() => console.log("connect")}>Let's connect<ArrowRightCircle size={25}/></button>
                     </div> }
                     </TrackVisibility>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
-                  <img src={headerImg} alt="Header Img"/>
+                  { <img src={imgg} alt="Header Img"/> }
                   </Col>
             </Row>
         </Container>
