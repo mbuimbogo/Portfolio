@@ -7,7 +7,7 @@ import { faGithub, faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-ic
 
 const Footer = () => {
   return (
-    <footer className='footer mt-5'>
+    <footer className='footer mt-3 pb-3'>
     <Container>
     <Row className="align-item-center">
     <Col sm = {6} className="logo">
