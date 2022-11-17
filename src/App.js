@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './Components/NavBar';
 import Banner from './Components/Banner';
 import Skills from './Components/Skills';
+import Experience from './Components/Experience';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
@@ -16,6 +17,7 @@ function App() {
      <NavBar/>
      <Banner/>
      <Skills/>
+     <Experience/>
      <Projects/>
      {/* <Routes>
       <Route path='/' element={<Banner/>}/>
