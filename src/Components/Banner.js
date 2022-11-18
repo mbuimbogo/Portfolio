@@ -2,11 +2,15 @@ import { useEffect, useState } from 'react';
 import React from 'react'
 import { Container, Row, Col} from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+
+// import PeterResume from "../assets/Peter-Resume.pdf"
 // import headerImg from "../assets/images/header-img.svg";
 import imgg from "../assets/images/imgg.jpg"
 import TrackVisibility from 'react-on-screen';
 import 'animate.css';
 import { isVisible } from '@testing-library/user-event/dist/utils';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 const Banner = () => {
   const [loopNum, setLoopNum]=useState(0);
@@ -15,6 +19,24 @@ const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random()*100);
   const period = 2000;
+  
+  const onButtonClick = () => {
+    fetch("Peter-Resume.pdf").then(response => {
+      response.blob().then(blob => {
+
+        const fireURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement('a');
+        alink.href = fireURL;
+        alink.download = 'Peter-Resume.pdf';
+        alink.click();
+      })
+    })
+  }
+  
+  const onButtonBlogClick = () => {
+  <a target={"_blank"} rel="noreferrer" href="https://mbogo.tech" alt="blogsite"/>
+  
+  }
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -55,8 +77,14 @@ const Banner = () => {
                     <span className='tagline'>Welcome to my Portfolio</span>
                     <h1>{`Hi I'm Peter `}<span className='wrap'>{text}</span></h1>
                     <p>Front-end Developer with a demonstrated history of working in the internet industry. Building Web applications with React js and some other cool libraries and frameworks.</p>
-                    <button onClick={() => console.log("connect")}>Let's connect<ArrowRightCircle size={25}/></button>
-                    </div> }
+                    {/* <button onClick={() => console.log("connect")}>Let's connect<ArrowRightCircle size={25}/></button> */}
+                   
+                    <button className="btn btn-primary" onClick={onButtonClick}>RESUME<ArrowRightCircle size={25}/></button>
+                    <button className="btn btn-primary" onClick={onButtonBlogClick}>BlogSite<ArrowRightCircle size={25}/></button>
+                                          
+                  </div> 
+                    
+                    }
                     </TrackVisibility>
                 </Col>
                 <Col xs={12} md={6} xl={5}>

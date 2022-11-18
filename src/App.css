@@ -43,6 +43,7 @@ img {
 
 .home{
   color: #B8B8B8 !important;
+  
 }
 
 button {
@@ -72,7 +73,7 @@ p.danger {
 /*Navbar css*/
 
 nav.navbar {
-  padding: 18px 0;
+  padding: 15px 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -141,9 +142,9 @@ span.navbar-text {
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
-  padding: 18px 34px;
+  padding: 10px 11px;
   font-size: 18px;
-  margin-left: 18px;
+  margin-left: 10px;
 	position: relative;
 	background-color: transparent;
 	transition: 0.3s ease-in-out;
@@ -269,6 +270,32 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
+
+.site{
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  
+}
+
+.blog{
+  padding-top: 10px;
+}
+
+.blog a {
+  width: 42px;
+  height: 42px;
+  /* background: rgba(217, 217, 217, 0.1);  */
+  display: inline-flex;
+  border-radius: 100%;
+  /* margin-right: 110px; */
+  float: left;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
 .banner img {
   animation:updown 3s linear infinite;
 }
@@ -465,7 +492,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Contacts Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 60px 0 200px 0;
+  padding: 60px 0 100px 0;
 }
 .contact img {
   width: 92%;

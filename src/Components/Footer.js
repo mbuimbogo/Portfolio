@@ -15,7 +15,7 @@ const Footer = () => {
     </Col>
     <Col sm={6} className= "text-center text-sm-end">
         <div className='social-icon'>
-        {/* <a href="#" src={navIcon1} alt="" /> */}
+  
         <a target={"_blank"} rel="noreferrer" href="https://github.com/mbuimbogo" alt="github">
                       <FontAwesomeIcon icon={faGithub} color="#fff"/>
                       </a> 

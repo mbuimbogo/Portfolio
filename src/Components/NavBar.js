@@ -3,7 +3,8 @@ import {useState, useEffect} from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import { NavLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+//import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
 // import logo from "../assets/images/logo.svg";
@@ -42,6 +43,7 @@ const NavBar = () => {
               <Nav className="me-auto">
                 <Nav.Link href="#home" className={ activeLink === "home" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdatedActiveLink("home")} >Home</Nav.Link>
                 <Nav.Link href="#skills" className={ activeLink === "skills" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdatedActiveLink("skills")} >Skills</Nav.Link>
+                <Nav.Link href="#experience" className={ activeLink === "experience" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdatedActiveLink("experience")} >Experience</Nav.Link>
                 <Nav.Link href="#projects" className={ activeLink === "projects" ? "active navbar-link" : "navbar-link"} onClick={() => onUpdatedActiveLink("projects")} >Projects</Nav.Link>
                 {/* <NavLink to="/" className="navbar-link" >Banner</NavLink>
                 <NavLink   to="./skills" className="navbar-link" >Skills</NavLink>
@@ -58,14 +60,13 @@ const NavBar = () => {
                       </a> 
                       <a target={"_blank"} rel="noreferrer" href="https://twitter.com/mbogotech?t=ZyV92QJ8MI8TLPF2MJif2gs=09" alt="twitter">
                       <FontAwesomeIcon icon={faTwitter} color="#fff"/>
-                      </a> 
+                      </a>                    
                     
-                    
-                    {/* <a href="https://www.linkedin.com/in/mbuipeter" src={navIcon2} alt="linkedin" width="16" height="16" viewBox="0 0 16 16"  />
-                    <a href="https://twitter.com/mbogotech?t=ZyV92QJ8MI8TLPF2MJif2gs=09" src={twitterIm} alt="twitter" width="16" height="16"  /> */}
-                    {/* <a href="#" src={} alt="" /> */}
+                   
                 </div>
-                <button className='vvd' onClick={()=> console.log("contact")}><span>Let's connect</span></button>
+                <HashLink to="#connect">
+                <button className='vvd'><span>Let's connect</span></button>
+                </HashLink>
               </span>
             </Navbar.Collapse>
           </Container>
